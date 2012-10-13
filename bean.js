@@ -7,7 +7,7 @@ $(function(){
                 "images/heart2.png",
                 "images/heart3.png"]
   $('img').bind('dragstart', function(e) { e.preventDefault(); });
-  var socket = io.connect('http://localhost:8000');
+  var socket = io.connect('http://abovesobelow:8800');
 
   $(window).click(function(e) {
     var data = {x: e.clientX, y: e.clientY};
