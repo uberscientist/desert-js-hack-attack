@@ -1,5 +1,29 @@
-body: {
+html {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
   font-family: sans-serif;
+  /* background: url(/images/background.JPG) no-repeat center; */
+}
+
+img#background {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: -1;
+}
+
+img.bean {
+  position: absolute;
 }
 
 div#pagewrap {
