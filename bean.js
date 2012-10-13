@@ -8,7 +8,7 @@ $(function(){
                 "images/heart3.png"];
   var stockImage = "images/stock.png";
   $('img').bind('dragstart', function(e) { e.preventDefault(); });
-  var socket = io.connect('http://abovesobelow:8800');
+  var socket = io.connect('http://abovesobelow.com:8800');
 
   $(window).click(function(e) {
     var data = {x: e.clientX, y: e.clientY};
@@ -16,9 +16,10 @@ $(function(){
   });
 
   socket.on('bean_emit', function(data) {
+    console.log(data);
     var len = images.length;
     $('body').append('<img id="'+ data.id +'" class="bean" src="'+ images[Math.floor(Math.random()*images.length)] +'"/>')
-             .append('<img id="stock' + data.id +'" class="stock" src="'+ stockImage+'/>");
+             .append('<img id="stock' + data.id +'" class="stock" src="'+ stockImage+'" />');
     var bean = $('img#'+ data.id);
     var stock = $('img#stock'+ data.id);
     var posX = data.x - 60;
@@ -32,6 +33,5 @@ $(function(){
     bean.fadeOut(3000, function() {
       stock.fadeIn(500);
     });
-
   });
 });

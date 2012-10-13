@@ -26,6 +26,10 @@ img.bean {
   position: absolute;
 }
 
+img.stock {
+  position: absolute;
+}
+
 div#pagewrap {
   width: 777px;
   margin: 20px auto;
