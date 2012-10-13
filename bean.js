@@ -16,7 +16,6 @@ $(function(){
   });
 
   socket.on('bean_emit', function(data) {
-    console.log(data);
     var len = images.length;
     $('body').append('<img id="'+ data.id +'" class="bean" src="'+ images[Math.floor(Math.random()*images.length)] +'"/>')
              .append('<img id="stock' + data.id +'" class="stock" src="'+ stockImage+'" />');

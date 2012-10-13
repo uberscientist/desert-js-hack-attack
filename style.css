@@ -34,3 +34,7 @@ div#pagewrap {
   width: 777px;
   margin: 20px auto;
 }
+
+div#preload {
+  display: none;
+}
