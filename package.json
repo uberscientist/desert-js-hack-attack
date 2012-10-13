@@ -1,0 +1,8 @@
+{
+  "name": "hack-attack",
+  "version": "0.0.1",
+  "author": "us!"
+  "dependencies": {
+    "socket.io": "0.9.x"
+  }
+}
