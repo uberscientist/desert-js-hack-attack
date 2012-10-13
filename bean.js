@@ -13,7 +13,7 @@ $(function(){
     var bean = $('img#'+ data.id);
     var posX = data.x - Math.floor(bean.width()/2);
     var posY = data.y - Math.floor(bean.height()/2);
-    { top: posY, 
+    bean.css({ top: posY, 
       left: posX,
       zIndex: data.id });
 
