@@ -1,0 +1,8 @@
+body: {
+  font-family: sans-serif;
+}
+
+div#pagewrap {
+  width: 777px;
+  margin: 20px auto;
+}
