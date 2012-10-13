@@ -1,8 +1,9 @@
 {
-  "name": "hack-attack",
+  "name": "hack-attack-SexyJScripters",
   "version": "0.0.1",
-  "author": "us!"
+  "author": "us! Cris Ed James Zack Claudia",
   "dependencies": {
     "socket.io": "0.9.x"
+  
   }
 }
