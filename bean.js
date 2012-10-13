@@ -8,14 +8,13 @@ $(function(){
   });
 
   socket.on('bean_emit', function(data) {
-    console.log(data);
     $('body').append('<img id="'+ data.id +'" class="bean" src="images/bean1.png" />');
     var bean = $('img#'+ data.id);
-    var posX = data.x - Math.floor(bean.width()/2);
-    var posY = data.y - Math.floor(bean.height()/2);
+    var posX = data.x - 60;
+    var posY = data.y - 60;
     bean.css({ top: posY, 
-      left: posX,
-      zIndex: data.id });
+              left: posX,
+            zIndex: data.id });
 
   });
 });
