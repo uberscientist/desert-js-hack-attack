@@ -10,12 +10,7 @@ $(function(){
   $('img').bind('dragstart', function(e) { e.preventDefault(); });
   var socket = io.connect('http://abovesobelow.com:8800');
 
-  $(window).click(function(e) {
-    var data = {x: e.clientX, y: e.clientY};
-    socket.emit('place_bean', data);
-  });
-
-  socket.on('bean_emit', function(data) {
+  function placeBean(data) {
     var len = images.length;
     $('body').append('<img id="'+ data.id +'" class="bean" src="'+ images[Math.floor(Math.random()*images.length)] +'"/>')
              .append('<img id="stock' + data.id +'" class="stock" src="'+ stockImage+'" />');
@@ -32,5 +27,14 @@ $(function(){
     bean.fadeOut(3000, function() {
       stock.fadeIn(500);
     });
+  }
+
+  $(window).click(function(e) {
+    var data = {x: e.clientX, y: e.clientY};
+    socket.emit('place_bean', data);
+  });
+
+  socket.on('bean_emit', function(data) {
+    placeBean(data);
   });
 });

@@ -12,6 +12,11 @@ body {
   /* background: url(/images/background.JPG) no-repeat center; */
 }
 
+h2#footer {
+  position: absolute;
+  bottom: 10px;
+}
+
 img#background {
   position: absolute;
   bottom: 0px;
@@ -33,6 +38,7 @@ img.stock {
 div#pagewrap {
   width: 777px;
   margin: 20px auto;
+  height: 100%;
 }
 
 div#preload {
